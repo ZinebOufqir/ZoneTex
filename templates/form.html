@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        
+        
+      
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Harmattan:400,900");
+html{
+    background: url("https://dl.dropboxusercontent.com/s/ryx271rbso20qjp/background-moon-balon.jpg?dl=0") no-repeat;
+	background-size: cover;
+    min-height: 100%;
+}
+
+body{
+  background: none;
+
+  
+}
+</style>
+<body>
+<script src="static/js/navbar.js"></script>
+<div class="container" id="advanced-search-form">
+    <h2>Complete this form </h2>
+    <!-- <div class="div1"> 
+        thsi is a div
+    </div>-->
+    <!-- <div id="includedContent"> 
+        
+    </div>-->
+    
+    <div class="id2">
+    <form  method="post" action="/takeval">
+     <div id="content">
+      <div class="form-group">
+        <label for="Propositin1">C1</label>
+        <select name="post1" id ="post1"  class="form-control" title="Surface Area">
+
+            
+        </select> 
+      </div>
+      <div class="form-group">
+        <label for="Propositin2">C2</label>
+        <select name="post2" id ="post2"  class="form-control" title="Ocuupied Area">
+          
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin3">C3</label>
+        <select name="post3" id ="post3"  class="form-control" title="Reserved for Infrastructure">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin4">C4</label>
+        <select name="post4" id ="post4" onchange="run()" class="form-control" title="Not Usable">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin5">C5</label>
+        <select name="post5" id ="post5" onchange="run()" class="form-control" title="Available And Expandable">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin6">C6</label>
+        <select name="post6" id ="post6" onchange="run()" class="form-control" title="Nearest Urban Center">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin7">C7</label>
+        <select name="post7" id ="post7" onchange="run()" class="form-control" title="Nearest High Way">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin10">C8</label>
+        <select name="post8" id ="post8" onchange="run()" class="form-control" title="Nearest Road & Its importance">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin9">C9</label>
+        <select name="post9" id ="post9" onchange="run()" class="form-control" title="CONNECTED OR NOT TO THR RAILWAY">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin10">C10</label>
+        <select name="post10" id ="post10" onchange="run()" class="form-control" title="Proximity or not to the water way">
+
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="Propositin11">C11</label>
+        <select name="post11" id ="post11"  class="form-control" title="Nearest Airport">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin12">C12</label>
+        <select name="post12" id ="post12"  class="form-control" title="Availability of public transportation">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Propositin13">C13</label>
+        <select name="post13" id ="post13"  class="form-control" title="Aisles">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition14">C14</label>
+        <select name="post14" id ="post14"  class="form-control" title="Street lighting">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition15">C15</label>
+        <select name="post15" id ="post15"  class="form-control" title="Water">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition16">C16</label>
+        <select name="post16" id ="post16"  class="form-control" title="Connection To Networks">
+
+            
+        </select> 
+      </div>
+      <div class="form-group">
+        <label for="Proposition17">C17</label>
+        <select name="post17" id ="post17"  class="form-control" title="Electricity">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition18">C18</label>
+        <select name="post18" id ="post18"  class="form-control" title="Natural gas">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition19">C19</label>
+        <select name="post19" id ="post19" onchange="run()" class="form-control" title="Type of buildings">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition20">C20</label>
+        <select name="post20" id ="post20" onchange="run()" class="form-control" title="Coefficient">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition21">C21</label>
+        <select name="post21" id ="post21"  class="form-control">
+
+            
+        </select> 
+      </div>
+      <div class="form-group">
+        <label for="Proposition22">C22</label>
+        <select name="post22" id ="post22"  class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition23">C23</label>
+        <select name="post23" id ="post23"  class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition24">C24</label>
+        <select name="post24" id ="post24" onchange="run()" class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition25">C25</label>
+        <select name="post25" id ="post25" onchange="run()" class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition26">C26</label>
+        <select name="post26" id ="post26"  class="form-control">
+
+            
+        </select> 
+      </div>
+      <div class="form-group">
+        <label for="Proposition27">C27</label>
+        <select name="post27" id ="post27"  class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition28">C28</label>
+        <select name="post28" id ="post28"  class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition29">C29</label>
+        <select name="post29" id ="post29" onchange="run()" class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition30">C30</label>
+        <select name="post30" id ="post30" onchange="run()" class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition31">C31</label>
+        <select name="post31" id ="post31"  class="form-control">
+
+            
+        </select> 
+      </div>
+      <div class="form-group">
+        <label for="Proposition32">C32</label>
+        <select name="post32" id ="post32"  class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition33">C33</label>
+        <select name="post33" id ="post33"  class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition34">C34</label>
+        <select name="post34" id ="post34" onchange="run()" class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Proposition35">C35</label>
+        <select name="post35" id ="post35" onchange="run()" class="form-control">
+
+        </select>
+      </div>
+    </div>
+      <div class="clearfix"></div>
+      <button type="submit" class="btn btn-info btn-lg btn-responsive" id="search"><i class="fa fa-cogs"aria-hidden="true"></i> <span class="glyphicon glyphicon-search"></span> Predict</button>
+    </form>
+    </div>
+  </div>
+  <script>
+    //    $("#includedContent").load("navbar.html");
+       
+   
+    /*------ options------*/  
+    var optionElement;
+      var input=["C1", "C2","C3","C4","C5","C6","C7","C8","C9","C10","C11", "C12","C13","C14","C15","C16","C17","C18","C19","C20","C21", "C22","C23","C24","C25","C26","C27","C28","C29","C30","C31", "C32","C33","C34","C35"];
+      for (var i = 0 ; i<input.length; i++){
+        selectElement= document.getElementById("post"+(i+1));
+      var optionElement = document.createElement("option");
+       
+       
+       for (var j = 1 ; j<=5; j++){
+            optionElement = document.createElement("option");
+            optionElement.setAttribute("value",j);
+            optionElement.textContent=j;
+            selectElement.appendChild(optionElement);
+       }
+      } 
+      /*for(var j=1 ; j<10; j++){
+      selectElement= document.getElementById("post"+j);
+       var optionElement = document.createElement("option");
+       optionElement.setAttribute("value","C0");
+      optionElement.textContent="Select a value: ";
+      selectElement.appendChild(optionElement);
+        for(let i = 0; i<=35 ; i++){
+        
+             optionElement = document.createElement("option");
+            optionElement.setAttribute("value",input[i]);
+            optionElement.textContent=input[i];
+            selectElement.appendChild(optionElement);
+      }
+    }
+    */
+    /*-----Disable the selected values on the others--------*/
+    /*var select = $('select');
+
+    select.change(function () {
+      select.find("option").show();
+      select.each(function(index, el) {
+        var val = $(el).val();
+        if (val) {
+        var $other = select.not(this);
+        $other.find("option[value=" + $(el).val() + "]").hide();
+        }
+      });
+    });*/
+    
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+  </body>
+  </html>

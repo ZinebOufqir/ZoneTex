@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+        
+        
+      
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Harmattan:400,900");
+html{
+    background: url("https://dl.dropboxusercontent.com/s/ryx271rbso20qjp/background-moon-balon.jpg?dl=0") no-repeat;
+	background-size: cover;
+    min-height: 100%;
+}
+
+body{
+  background: none;
+
+  
+}
+.container{
+
+    position:relative;
+    background-color: #fff;
+    max-width: 1000px;
+    height: 600px;
+    color: #858b8e;
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+    margin: 50px auto 0;
+    padding: 10px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+</style>
+<body>
+<script src="static/js/navbar.js"></script>
+<div style="margin-bottom:200px" class="container" id="advanced-search-form">
+    <h1>Prediction with an Accurancy of 99% And Loss of 1%</h1>
+        
+    <table>
+        <tr>
+          <th>Zone</th>
+          <th>Probabilité</th>
+        </tr>
+        
+        {% for i in range(11) %}
+        <tr>
+          <td>{{data[i][0]}}</td>
+          <td>{{"{:.2f}".format(data[i][1]*100)}}%</td>
+        </tr>              
+        {% endfor %}
+      
+        
+      </table>
+      
+      <div class="clearfix"></div>
+      <form action="/map" method="POST">
+        <button  type="submit" class="btn btn-info btn-lg btn-responsive" id="search"><i class="fa fa-cogs"aria-hidden="true"></i> <span class="glyphicon glyphicon-search"></span> Maps</button>
+    </form>
+</div>
+  </div>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  </body>
+  </html>
